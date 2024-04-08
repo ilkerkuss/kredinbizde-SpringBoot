@@ -17,10 +17,6 @@ public class ApplicationService {
     private final ApplicationRepository applicationRepository;
     private final ApplicationConverter applicationConverter;
 
-    /*
-    public ApplicationService(ApplicationConverter applicationConverter) {
-        this.applicationConverter = applicationConverter;
-    }*/
 
     public ApplicationResponse createApplication(ApplicationRequest request) {
 
