@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/LogService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/akbank-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/garanti-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kredinbizde-discovery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kredinbizde-gw/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kredinbizde-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification-service/src/main/java" charset="UTF-8" />
+  </component>
+</project>
