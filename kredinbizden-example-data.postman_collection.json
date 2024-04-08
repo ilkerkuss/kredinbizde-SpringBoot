@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "7caa2f0f-ef3b-4988-a811-564501fb90d7",
+		"name": "kredinbizden-example-data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29808887"
+	},
+	"item": [
+		{
+			"name": "akbank-service",
+			"item": [
+				{
+					"name": "create applicaton",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/akbank/v1/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"akbank",
+								"v1",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/akbank/v1/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"akbank",
+								"v1",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "garanti-service",
+			"item": [
+				{
+					"name": "create application",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/api/garanti/v1/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"garanti",
+								"v1",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/api/garanti/v1/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"garanti",
+								"v1",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kredinbizde-service",
+			"item": [
+				{
+					"name": "user/application",
+					"item": [
+						{
+							"name": "update user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"cem dırman\",\n    \"surname\": \"defineX\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/users/cem2@gmail.com",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"cem2@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"cem\",\n        \"surname\": \"dırman\",\n        \"birthDate\":\"1997-04-23\",\n        \"email\": \"cem2@gmail.com\",\n        \"password\": \"password\",\n        \"phoneNumber\": 5394443322,\n        \"isActive\": true,\n        \"address\":{\n            \"addressTitle\":\"Home\",\n            \"addressDescription\":\"İstanbul,Taksim\",\n            \"province\":\"İstanbul\"\n        },\n        \"applicationList\":[]\n    },\n    \"notificationType\": \"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "gel all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user by email",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/api/users/cem2@gmail.com",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"cem2@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user by userId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/users/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save application",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"loan\": {\n        \"type\": \"consumer\",\n        \"amount\": 500000,\n        \"installment\": 12,\n        \"bank\": {\n            \"bankId\": 2,\n            \"name\": \"Garanti\"\n        },\n        \"interestRate\": 2.59\n    },\n    \"email\": \"cem2@gmail.com\",\n    \"bankName\": \"Garanti\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/applications",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"applications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all applications",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/applications",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"applications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get applications by userId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/applications/id/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"applications",
+										"id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "bank/campaign/creditcard",
+					"item": [
+						{
+							"name": "save bank",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Garanti\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/banks",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all banks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/banks",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get banks {name]",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/banks/Garanti",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"banks",
+										"Garanti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save credit cards",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"standart\",\r\n    \"fee\":550,\r\n    \"campaignList\": [\r\n            {\r\n                \"title\": \"Ayda 7.000 TL'ye Varan Bonus!\",\r\n                \"content\": \"Garanti Content\",\r\n                \"dueDate\": \"2024-12-29\",\r\n                \"createDate\": \"2024-01-01\",\r\n                \"updateDate\": \"2024-05-15\",\r\n                \"sector\": \"OTHERS\"\r\n            },\r\n            {\r\n                \"title\": \"villareyonu.com'da 1.000 TL Bonus!\",\r\n                \"content\": \"Garanti Content\",\r\n                \"dueDate\": \"2024-11-29\",\r\n                \"createDate\": \"2024-01-01\",\r\n                \"updateDate\": \"2024-05-15\",\r\n                \"sector\": \"TRAVELS\"\r\n            },\r\n            {\r\n                \"title\": \"2024 Ramazan Bayramı Kampanyası!\",\r\n                \"content\": \"Garanti Content\",\r\n                \"dueDate\": \"2024-08-29\",\r\n                \"createDate\": \"2024-01-01\",\r\n                \"updateDate\": \"2024-05-15\",\r\n                \"sector\": \"MARKET\"\r\n            }\r\n        ],\r\n    \"bank\":{\r\n    \"bankId\": 2,\r\n    \"name\":\"Garanti\"\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/creditcards",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"creditcards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all credit cards",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/creditcards",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"creditcards"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get credit cards {bankname}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/creditcards/Garanti",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"creditcards",
+										"Garanti"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all campaigns",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/campaigns",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"campaigns"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "gw",
+			"item": [
+				{
+					"name": "save user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"userId\": 1,\n        \"name\": \"cem\",\n        \"surname\": \"dırman\",\n        \"email\": \"cem2@gmail.com\",\n        \"password\": \"password\",\n        \"phoneNumber\": 5394443322,\n        \"applicationList\": [],\n        \"active\": true\n    },\n    \"notificationType\": \"SMS\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
